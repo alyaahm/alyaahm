@@ -1,0 +1,36 @@
+<body>
+	    <pre>
+		<script language="javascript" type="text/javascript">
+		   <!--
+		   // set max cards to 5//
+		   var maxCards = 5;
+		   //set card array to empty array//
+		   var cardArray = [];
+		   // for cards 1 to max cards//
+		   for (var card = 1; card <= maxCards; card++) {
+		   // set random card to number from 1 to 10//
+		   var randomCard = Math.floor(Math.random() * 10) + 1;
+		   // add random card to the card array//
+		   cardArray.push(randomCard);
+		   
+		   // show card array on the page//
+		    document.write(cardArray);
+			
+			// Analyze//
+			cardArray.sort();
+			var win = "no";
+			for (var cardIndex = 0; cardIndex < maxCards; cardIndex++) {
+			    if  (cardArray[cardIndex] == cardArray[cardIndex + 1]) {
+				     win = "yes";
+				}
+		    }
+			    if(win == "yes") {
+				   document.write("You won!");
+				} else {
+				   document.write("Sorry, try again!");
+			}
+			//-->
+		script>
+	    </pre>
+	
+</html>
